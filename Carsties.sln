@@ -5,17 +5,17 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{066E2317-3CDB-487A-8819-045538CB2ED9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionService", "src\AuctionService\AuctionService.csproj", "{8C969DE9-C457-4A8F-BD69-48F29CE7A172}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuctionService", "src\AuctionService\AuctionService.csproj", "{8C969DE9-C457-4A8F-BD69-48F29CE7A172}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService", "src\SearchService\SearchService.csproj", "{1D53B5BF-1235-422E-BA41-1C551D290A2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchService", "src\SearchService\SearchService.csproj", "{1D53B5BF-1235-422E-BA41-1C551D290A2C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8C969DE9-C457-4A8F-BD69-48F29CE7A172} = {8C969DE9-C457-4A8F-BD69-48F29CE7A172}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8C969DE9-C457-4A8F-BD69-48F29CE7A172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -26,6 +26,9 @@ Global
 		{1D53B5BF-1235-422E-BA41-1C551D290A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D53B5BF-1235-422E-BA41-1C551D290A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D53B5BF-1235-422E-BA41-1C551D290A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8C969DE9-C457-4A8F-BD69-48F29CE7A172} = {066E2317-3CDB-487A-8819-045538CB2ED9}
