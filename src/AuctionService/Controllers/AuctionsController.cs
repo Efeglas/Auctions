@@ -95,6 +95,8 @@ namespace AuctionService.Controllers
             auction.Item.Km = updateAuctionDto.Km ?? auction.Item.Km;
             auction.Item.Year = updateAuctionDto.Year ?? auction.Item.Year;
 
+            await _publishEndpoint.Publish(_mapper.Map<AuctionUpdated>(auction));
+
             var result = await _context.SaveChangesAsync() > 0;
 
             if (result)
@@ -116,6 +118,8 @@ namespace AuctionService.Controllers
             }
 
             //TODO: check seller == username
+
+            await _publishEndpoint.Publish(_mapper.Map<AuctionDeleted>(id));
 
             _context.Auctions.Remove(auction);
 
